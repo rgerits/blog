@@ -1,4 +1,5 @@
 <x-layout>
+
     @foreach($posts as $post)
         <article class="{{ $loop->even ? 'mb-6' : '' }}">
             <h1>

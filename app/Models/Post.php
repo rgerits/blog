@@ -38,6 +38,8 @@ class Post
         {
             throw new ModelNotFoundException();
         }
+
+        return $post;
     }
 
     public static function all()
