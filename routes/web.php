@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 Route::get('posts/{post}', function ($slug) {
 
-    $post = Post::find($slug);
+    $post = Post::findOrFail($slug);
 
     return view('post', [
         'post' => $post,
