@@ -19,7 +19,7 @@ class CategoryFactory extends Factory
         $category = fake()->word;
 
         return [
-            'slug' => str($category)->lower(),
+            'slug' => fake()->slug,
             'name' => str($category)->upper(),
         ];
     }

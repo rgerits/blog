@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Category;
 
@@ -18,9 +19,10 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'category_id' => Category::factory()->create(),
-            'slug' => fake()->word,
-            'title' => fake()->word,
+            'user_id' => User::factory(),
+            'category_id' => Category::factory(),
+            'slug' => fake()->slug,
+            'title' => fake()->sentence,
             'excerpt' => fake()->sentence,
             'body' => fake()->paragraph,
         ];
