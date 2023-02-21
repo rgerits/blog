@@ -4,15 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Post;
 
-class Post extends Model
+class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'excerpt', 'body'];
-
-    public function category()
+    public function posts()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Post::class);
     }
 }
